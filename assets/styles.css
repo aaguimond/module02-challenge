@@ -11,23 +11,20 @@ body {
 }
 
 header {
-    display: block;
-    flex-wrap: wrap;
     width: 100%;
     background-color: var(--backgroundc);
+    border: 4px solid maroon;
 }
 
 .header {
-    box-sizing: border-box;
-    margin: 20px 20px 10px 10px;
-    float:left;
-    display: block;
+    float: left;
 }
 
 #title {
     text-align: left;
     color: cornsilk;
     text-shadow: 2px 1px 2px bisque;
+    margin: 20px 20px
 }
 
 .accent {
@@ -47,12 +44,27 @@ header nav {
     margin: 20px;
 }
 
-header nav ul a li{
+header nav ul a li {
     text-decoration: none;
     list-style: none;
     color: aliceblue;
     margin: 30px;
     display: inline-block;
+}
+
+.sticky {
+    position: sticky;
+    top: 5px;
+    bottom: auto;
+    left: 100px;
+    right: 30px;
+    z-index: 1;
+}
+
+#projects,
+#about,
+#contact {
+    
 }
 
 #projects {
