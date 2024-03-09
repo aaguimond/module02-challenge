@@ -138,7 +138,6 @@ aside {
 #github {
     margin: 1%;
     padding: 2%;
-    display: ;
 }
 
 @media screen and (max-width:992px) {
@@ -156,9 +155,6 @@ aside {
     }
     header nav ul a li {
         margin: 1px 10px 3px 20px;
-    }
-    aside {
-        display:
     }
     #about {
         margin: 0 0 0 40%;
