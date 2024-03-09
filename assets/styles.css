@@ -21,23 +21,31 @@ header {
 }
 
 .header {
-    float: left;
+    float: lef;
 }
 
-.sticky {
+.stickynav {
     position: sticky;
     top: 0px;
     bottom: auto;
-    left: 100px;
-    right: 30px;
+    left: auto;
+    right: auto;
     z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: fit-content;
 }
 
 #title {
     text-align: left;
     color: var(--mainc1);
     text-shadow: 2px 1px 2px var(--accentc1);
-    margin: 20px 20px
+    margin: 5px 20px 5px;
 }
 
 .accent {
@@ -46,23 +54,34 @@ header {
 }
 
 #desc {
-    margin: 50px 0px 10px -380px;
     color: var(--accentc1);
     text-shadow: 1px 1px 1px var(--mainc2);
-    display: block;
+    font-size: 28px;
+    margin: -10px auto auto auto;
 }
 
 header nav {
     float: right;
-    margin: 20px;
 }
 
 header nav ul a li {
     text-decoration: none;
     list-style: none;
     color: var(--mainc2);
-    margin: 30px;
+    margin: 20px;
     display: inline-block;
+}
+
+.horiseon-text {
+    padding: 0px;
+    margin: 2%;
+    font-size: 26px;
+}
+
+.horiseon-img {
+    justify-content: center;
+    padding: 0% 2% 4% 2%;
+    width: 100%
 }
 
 #projects,
@@ -70,24 +89,126 @@ header nav ul a li {
 #contact {
     color: var(--bgc2mc3);
     text-shadow: var(--mainc1);
-    font-size: 26px;
+    font-size: 36px;
     padding: 5px;
     margin: 0px 10px 20px 10px;
 }
 
+.projects {
+
+}
+
 #projects {
-
 }
 
-#about {
-
+aside {
+    flex: auto;
+    display: inline-flex;
 }
 
-#contact {
-
+.about {
+    display: inline-block;
+    max-width: 75%;
 }
 
-.horiseon {
-    padding: 10px;
-    margin: 10px;
+#abouttext {
+    float: left;
+    padding: 2%;
+    width: 60%;
+}
+
+#aboutportrait {
+    width: 40%;
+    padding: 2.5%;
+}
+
+.contact {
+    max-width: 25%;
+}
+
+#andlinks {
+    font-size: 24px;
+    margin-left: 2%;
+}
+
+#githublink {
+}
+
+#email,
+#github {
+    margin: 1%;
+    padding: 2%;
+    display: ;
+}
+
+@media screen and (max-width:992px) {
+    #desc {
+        font-size: 24px;
+    }
+    #title, #projects, #about, #contact {
+        font-size: 28px;
+    }
+    #andlinks{
+        font-size: 18px;
+    }
+    .horiseon-text {
+        font-size: 22px;
+    }
+    header nav ul a li {
+        margin: 1px 10px 3px 20px;
+    }
+    aside {
+        display:
+    }
+    #about {
+        margin: 0 0 0 40%;
+    }
+}
+
+@media screen and (max-width:893px) and (min-width:811px) {
+    #githublink {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width:810px) and (min-width:768px) {
+    #githublink {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #desc {
+        display:none;
+    }
+    #title, #projects, #about, #contact {
+        font-size: 24px;
+    }
+    #andlinks{
+        font-size: 16px;
+    }
+    .horiseon-text {
+        font-size: 20px;
+    }
+    header nav ul a li {
+        color: var(--accentc1);
+        margin: 1px 10px 3px 20px;
+    }
+    aside {
+        flex-wrap: wrap;
+    }
+    .about {
+        min-width: 100%;
+    }
+    .contact {
+        min-width: 100%;
+    }
+    .contact-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (hover:hover) {
+
 }
