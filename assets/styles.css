@@ -30,7 +30,7 @@ header {
     bottom: auto;
     left: auto;
     right: auto;
-    z-index: 1;
+    z-index: 2;
 }
 
 .container {
@@ -73,24 +73,68 @@ header nav ul a li {
 }
 
 article #projects {
-    text-shadow: 2px 2px var(--mainc1)
+    text-shadow: 2px 2px var(--mainc1);
+    margin-bottom: -20px;
+}
+
+main article h3 {
+    justify-content: center;
+}
+
+#projects-title {
+    margin-left: 1%;
+}
+
+.projects-text-wrapper {
+    display: inline-block;
+    border: 10px solid var(--bgc2mc3);
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    z-index: 1;
 }
 
 .projects-text {
-    margin: 2%;
     font-size: 26px;
-    color: var(--bgc2mc3);
-    text-shadow: 1px 1px var(--mainc1);
+    text-decoration: none;
+    color: var(--mainc1);
+    background-color: var(--bgc2mc3);
+    position: relative;
+    z-index: 1;
 }
 
-.horiseon-img,
-.placeholder-img {
+.img-wrapper {
+    display: inline-block;
+    border: 10px solid var(--bgc2mc3);
     justify-content: center;
     width: 96%;
     border-radius: 0% 3% 3% 3%;
     padding: 0% 0% 0% 0%;
     margin: 0% 0% 0% 2%;
-    border: 2px solid var(--bgc2mc3);
+    z-index: 1;
+    position: inherit;
+    background-color: black;
+}
+
+.horiseon-img,
+.placeholder-img {
+    justify-content: center;
+    width: 100%;
+    border-radius: 0% 2% 2% 2%;
+}
+
+.horiseon-img,
+.placeholder-img {
+    opacity: 60%;
+    transition: .2s;
+    margin-bottom: -3px;
+}
+
+#projects {
+    background-image: linear-gradient(var(--mainc1), var(--backgroundc1));
+    font-size: 50px;
 }
 
 #projects,
@@ -98,13 +142,24 @@ article #projects {
 #contact {
     color: var(--bgc2mc3);
     text-shadow: var(--mainc1);
-    font-size: 36px;
-    padding: 5px;
-    margin: 0px 10px 20px 10px;
+}
+
+#projects,
+#about {
+    margin: 0px 10px -30px 10px;
+}
+
+#about,
+#contact {
+    font-size: 30px;
+    margin: 2% 0% 0% 2%;
+}
+
+#contact {
+    margin: 6% 10% 4% 4%;
 }
 
 .projects {
-    margin-bottom: 2%;
     border: 0px solid var(--bgc2mc3);
 }
 
@@ -155,7 +210,7 @@ aside section p {
 }
 
 #andlinks {
-    font-size: 24px;
+    font-size: 18px;
     margin-left: 2%;
 }
 
@@ -174,11 +229,18 @@ aside section p {
     #desc {
         font-size: 24px;
     }
-    #title, #projects, #about, #contact {
-        font-size: 28px;
+    #projects-title {
+        font-size: 38px;
     }
-    #andlinks{
-        font-size: 18px;
+    #title, #about {
+        font-size: 26px;
+    }
+    #contact {
+        font-size: 22px;
+    }
+    #about {
+        left: 22px;
+        margin: 2%;
     }
     .horiseon-text {
         font-size: 22px;
@@ -192,35 +254,8 @@ aside section p {
     .contact {
         margin: 1% -1% 1% 1%
     }
-}
-
-@media screen and (max-width:1200px) and (min-width:1081px) {
-    #githublink {
-        font-size: 98%;
-    }
-}
-
-@media screen and (max-width:1080px) and (min-width:951px) {
-    #githublink {
-        font-size: 87%;
-    }
-}
-
-@media screen and (max-width:950px) and (min-width:894px) {
-    #githublink {
-        font-size: 80%;
-    }
-}
-
-@media screen and (max-width:893px) and (min-width:811px) {
-    #githublink {
-        font-size: 75%;
-    }
-}
-
-@media screen and (max-width:810px) and (min-width:768px) {
-    #githublink {
-        font-size: 70%;
+    #contact {
+        margin: 2%;
     }
 }
 
@@ -228,7 +263,10 @@ aside section p {
     #desc {
         display:none;
     }
-    #title, #projects, #about, #contact {
+    #projects-title {
+        font-size: 32px;
+    }
+    #title, #about, #contact {
         font-size: 24px;
     }
     #andlinks{
@@ -240,6 +278,10 @@ aside section p {
     header nav ul a li {
         color: var(--accentc1);
         margin: 1px 10px 3px 20px;
+    }
+    .projects-text-wrapper {
+        top: 50px;
+        left: 16px;
     }
     aside {
         flex-wrap: wrap;
@@ -256,15 +298,73 @@ aside section p {
     }
 }
 
+@media screen and (max-width:1200px) and (min-width:1081px) {
+    #githublink {
+        font-size: 98%;
+    }
+    .projects-text-wrapper {
+        left: 28px;
+    }
+}
+
+@media screen and (max-width:1080px) and (min-width:951px) {
+    #githublink {
+        font-size: 87%;
+    }
+    #contact {
+        font-size: 26px;
+    }
+    .projects-text-wrapper {
+        left: 24px;
+    }
+}
+
+@media screen and (max-width:950px) and (min-width:894px) {
+    #githublink {
+        font-size: 80%;
+    }
+    .projects-text-wrapper {
+        left: 24px;
+    }
+}
+
+@media screen and (max-width:893px) and (min-width:811px) {
+    #githublink {
+        font-size: 75%;
+    }
+    .projects-text-wrapper {
+        left: 22px;
+    }
+}
+
+@media screen and (max-width:810px) and (min-width:768px) {
+    #githublink {
+        font-size: 70%;
+    }
+    .projects-text-wrapper {
+        left: 20px;
+    }
+}
+
 li:hover {
-    text-shadow: white 1px 0 10px;
+    text-shadow: var(--accentc1) 1px 0 10px;
+    transition: .2s;
 }
 
 a:hover {
     text-shadow: var(--bgc2mc3) 1px 0 10px;
+    transition: all .2s ease-out;
 }
 
-a:focus {
-    color: var(--accentc1);
-    border: 1px solid var(--bgc2mc3);
+aside a:hover {
+    text-shadow: var(--accentc1) 1px 0 10px;
+    transition: all .2s ease-out;
+}
+
+.projects-text:hover,
+.horiseon-img:hover,
+.placeholder-img:hover {
+    opacity: 100%;
+    transition: all 0.25s ease-out;
+
 }
