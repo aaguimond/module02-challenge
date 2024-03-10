@@ -72,16 +72,25 @@ header nav ul a li {
     display: inline-block;
 }
 
-.horiseon-text {
-    padding: 0px;
-    margin: 2%;
-    font-size: 26px;
+article #projects {
+    text-shadow: 2px 2px var(--mainc1)
 }
 
-.horiseon-img {
+.projects-text {
+    margin: 2%;
+    font-size: 26px;
+    color: var(--bgc2mc3);
+    text-shadow: 1px 1px var(--mainc1);
+}
+
+.horiseon-img,
+.placeholder-img {
     justify-content: center;
-    padding: 0% 2% 4% 2%;
-    width: 100%
+    width: 96%;
+    border-radius: 0% 3% 3% 3%;
+    padding: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 2%;
+    border: 2px solid var(--bgc2mc3);
 }
 
 #projects,
@@ -95,10 +104,8 @@ header nav ul a li {
 }
 
 .projects {
-
-}
-
-#projects {
+    margin-bottom: 2%;
+    border: 0px solid var(--bgc2mc3);
 }
 
 aside {
@@ -109,12 +116,26 @@ aside {
 .about {
     display: inline-block;
     max-width: 75%;
+    margin: 1%;
+    background-color: var(--accentc1);
+}
+
+header,
+.about,
+.contact,
+.projects img {
+    box-shadow: 1px 1px 5px var(--bgc2mc3);
+}
+
+aside section p {
+    margin: 15px 0;
 }
 
 #abouttext {
     float: left;
     padding: 2%;
     width: 60%;
+    color: var(--bgc2mc3);
 }
 
 #aboutportrait {
@@ -124,6 +145,13 @@ aside {
 
 .contact {
     max-width: 25%;
+    background-color: var(--bgc2mc3);
+    color: var(--accentc1);
+    margin: 1%;
+}
+
+#contact {
+    color: var(--accentc1);
 }
 
 #andlinks {
@@ -131,7 +159,9 @@ aside {
     margin-left: 2%;
 }
 
-#githublink {
+#githublink,
+#email a {
+    color: var(--mainc1);
 }
 
 #email,
@@ -156,20 +186,41 @@ aside {
     header nav ul a li {
         margin: 1px 10px 3px 20px;
     }
-    #about {
-        margin: 0 0 0 40%;
+    aside {
+        margin: 0% 2% 0% 0%;
+    }
+    .contact {
+        margin: 1% -1% 1% 1%
+    }
+}
+
+@media screen and (max-width:1200px) and (min-width:1081px) {
+    #githublink {
+        font-size: 98%;
+    }
+}
+
+@media screen and (max-width:1080px) and (min-width:951px) {
+    #githublink {
+        font-size: 87%;
+    }
+}
+
+@media screen and (max-width:950px) and (min-width:894px) {
+    #githublink {
+        font-size: 80%;
     }
 }
 
 @media screen and (max-width:893px) and (min-width:811px) {
     #githublink {
-        font-size: 90%;
+        font-size: 75%;
     }
 }
 
 @media screen and (max-width:810px) and (min-width:768px) {
     #githublink {
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
@@ -205,6 +256,15 @@ aside {
     }
 }
 
-@media (hover:hover) {
+li:hover {
+    text-shadow: white 1px 0 10px;
+}
 
+a:hover {
+    text-shadow: var(--bgc2mc3) 1px 0 10px;
+}
+
+a:focus {
+    color: var(--accentc1);
+    border: 1px solid var(--bgc2mc3);
 }
