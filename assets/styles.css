@@ -301,6 +301,14 @@ footer h4 {
     #contact {
         margin: 2%;
     }
+    footer h3 {
+        margin: 2% 0 0 39%;
+        font-size: 18px;
+    }
+    
+    footer h4 {
+        margin: 0 0 2% 45%
+    }
     /*This media query changes the font size and margins from multiple elements at slightly
     smaller window sizes.*/
 }
@@ -339,6 +347,8 @@ footer h4 {
     .projects-text-wrapper {
         top: 36px;
         left: 16px;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
     aside {
         flex-wrap: wrap;
@@ -352,6 +362,14 @@ footer h4 {
     .contact-content {
         display: flex;
         flex-wrap: wrap;
+    }
+    footer h3 {
+        margin: 2% 0 0 37%;
+        font-size: 16px;
+    }
+    
+    footer h4 {
+        margin: 0 0 2% 47%
     }
     /*This media query changes the font size and margins from multiple elements at smaller
     window sizes. It also shortens our job title to make the nav bar more efficient, places
