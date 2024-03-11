@@ -30,7 +30,7 @@ Building a website using HTML, CSS, and Git
 
 ## Purpose
 
-This project is a part of my education for Northwestern University's Coding Bootcamp. Our objective was to create a live URL for our continuing portfolio.
+This project is a part of my education for Northwestern University's Coding Bootcamp. Our objective was to create a live URL to host our continuously growing portfolios.
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ This project was completed using [Git Bash](https://git-scm.com/about), [Visual 
 
 ### HTML Elements
 
-
+In this project we utilized semantic HTML elements. This portfolio page also uses image wrappers to better showcase my completed projects. These allowed me to provide interactive CSS style to the projects while also keeping them looking clean.
 
 ### CSS Elements
 
