@@ -50,7 +50,8 @@ header {
 #title {
     color: var(--mainc1);
     text-shadow: 2px 1px 2px var(--accentc1);
-    margin: 5px 20px 5px;
+    margin: 5px 0 0.5% 1.5%;
+    display: inline-block;
     /*This describes the color of our title, gives it a shadow of a different color, and
     defines its margins.*/
 }
@@ -65,7 +66,9 @@ header {
     color: var(--accentc1);
     text-shadow: 1px 1px 1px var(--mainc2);
     font-size: 28px;
-    margin: -10px auto auto auto;
+    margin: -2% 0 0 0;
+    display: block;
+    text-align: left;
     /*Aidan's title (or descriptor of 'web developer') has different color, shadow, and
     size from the title, and displays beneath it until a certain size.*/
 }
@@ -74,8 +77,11 @@ header nav ul a li {
     text-decoration: none;
     list-style: none;
     color: var(--mainc2);
-    margin: 20px;
-    display: inline-block;
+    margin: 2%;
+    text-align: center;
+    flex-wrap: nowrap;
+    display: inline-flex;
+    margin: 20px 10px 3px 20px;
     /*This gives our nav text color and size and removes its bullet points. It displays
     as a block element inline with the title as size permits.*/
 }
@@ -100,7 +106,9 @@ article #projects {
 }
 
 #projects-title {
-    margin-left: 42%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
     /*This positions our 'Projects' title within our page.*/
 }
 
@@ -209,7 +217,7 @@ aside section p {
 }
 
 #contact {
-    margin: 6% 10% 4% 4%;
+    margin: 6% 0% 4% 4%;
     /*This gives our contact section spacing within its box.*/
 }
 
@@ -235,6 +243,12 @@ aside section p {
     margin: 1%;
     /*The contact section will occupy 25% of the aside's width at larger window sizes.
     It will also have different colors and a slight margin.*/
+}
+
+#contact,
+#andlinks {
+    width: 100%;
+    text-align: center;
 }
 
 #contact {
@@ -263,18 +277,24 @@ aside section p {
 }
 
 footer h3 {
-    margin: 2% 0 0 43.5%;
+    margin: 2% 0 0 0;
+    width: 100%;
+    text-align: center;
     /*This centers our footer text*/
 }
 
 footer h4 {
-    margin: 0 0 2% 49%
+    margin: 0 0 1% 0;
+    width: 100%;
+    text-align: center;
     /*This centers our copyright and gives it some separation from the bottom of the page.*/
 }
 
 @media screen and (max-width:992px) {
     #desc {
         font-size: 24px;
+        margin: 0 0 2% 0;
+        text-align: left;
     }
     #projects-title {
         font-size: 38px;
@@ -293,7 +313,7 @@ footer h4 {
         font-size: 22px;
     }
     header nav ul a li {
-        margin: 1px 10px 3px 20px;
+        margin: 20px 10px 3px 20px;
     }
     .projects-text-wrapper {
         top: 0.75%;
@@ -305,15 +325,10 @@ footer h4 {
         margin: 1% -1% 1% 1%
     }
     #contact {
-        margin: 2%;
+        margin: 1%;
     }
     footer h3 {
-        margin: 2% 0 0 39%;
         font-size: 18px;
-    }
-    
-    footer h4 {
-        margin: 0 0 2% 45%
     }
     /*This media query changes the font size and margins from multiple elements at slightly
     smaller window sizes.*/
@@ -321,13 +336,17 @@ footer h4 {
 
 @media screen and (max-width:768px) {
     #fullstack {
-        display:none;
+       font-size: 18px
     }
     #title {
         display: inline-flex;
         width: 100%;
     }
     #desc {
+        font-size: 24px;
+        margin: 1% 5% 0 0;
+        text-align: right;
+        width: 100%;
         font-size: 18px;
         position: sticky;
         top: 2.5%;
@@ -349,9 +368,15 @@ footer h4 {
     .projects-text {
         font-size: 20px;
     }
+    header nav {
+        width: 100%;
+        margin: 1%;
+    }
     header nav ul a li {
         color: var(--accentc1);
-        margin: 1px 10px 3px 20px;
+        margin: 1% 5% 0% 2%;
+        display: inline;
+        width: 100%;
     }
     .projects-text-wrapper {
         top: 1%;
@@ -373,12 +398,7 @@ footer h4 {
         flex-wrap: wrap;
     }
     footer h3 {
-        margin: 2% 0 0 37%;
         font-size: 16px;
-    }
-    
-    footer h4 {
-        margin: 0 0 2% 47%
     }
     /*This media query changes the font size and margins from multiple elements at smaller
     window sizes. It also shortens our page and job titles to make the nav bar more efficient, places
@@ -388,6 +408,14 @@ footer h4 {
     This also makes our about and contact sections display vertically instead of horizontally
     in order to more efficiently use the page space. It allows the content within our contact
     section to flex and wrap within their box at much smaller sizes.*/
+}
+
+@media screen and (max-width:576px) {
+    #fullstack {
+       display: none;
+    }
+    /*This shortens my description even further for ultra small screens improving
+    readability.*/
 }
 
 @media screen and (max-width:1200px) and (min-width:1081px) {
