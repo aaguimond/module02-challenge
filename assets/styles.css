@@ -8,16 +8,21 @@
     --mainc1: #f092dd;
     --mainc2: #ffaff0;
     --accentc1: #a8c7bb;
+    /*The above are global settings designating which fonts to use, that margins and paddings
+    should be set to 0 unless otherwise specified, and what colors we should use*/
 }
 
 body {
     background-color: var(--backgroundc1);
+    /*Our background color references our color palette from above*/
 }
 
 header {
     width: 100%;
     background-color: var(--bgc2mc3);
     border: 4px solid var(--accentc1);
+    /*Our header and nav bar take the entire width of the page, have a different background
+    color from our above states, and have a slight border*/
 }
 
 .stickynav {
@@ -27,6 +32,8 @@ header {
     left: auto;
     right: auto;
     z-index: 2;
+    /*Our nav bar is sticky and will stay within the window whenever the user scrolls. It will
+    also appear above other content within the page.*/
 }
 
 .container {
@@ -35,18 +42,23 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     height: fit-content;
+    /*The content within our header and nav will flex as our page changes size, and the title
+    and nav will occupy the left and right side of the page respectively (until at a smaller
+    size).*/
 }
 
 #title {
-    text-align: left;
     color: var(--mainc1);
     text-shadow: 2px 1px 2px var(--accentc1);
     margin: 5px 20px 5px;
+    /*This describes the color of our title, gives it a shadow of a different color, and
+    defines its margins.*/
 }
 
 .accent {
     color: var(--mainc2);
     text-shadow: 2px 1px 2px var(--accentc1);
+    /*Some text within the title is slightly different color to emphasize it.*/
 }
 
 #desc {
@@ -54,10 +66,8 @@ header {
     text-shadow: 1px 1px 1px var(--mainc2);
     font-size: 28px;
     margin: -10px auto auto auto;
-}
-
-header nav {
-    float: right;
+    /*Aidan's title (or descriptor of 'web developer') has different color, shadow, and
+    size from the title, and displays beneath it until a certain size.*/
 }
 
 header nav ul a li {
@@ -66,26 +76,32 @@ header nav ul a li {
     color: var(--mainc2);
     margin: 20px;
     display: inline-block;
+    /*This gives our nav text color and size and removes its bullet points. It displays
+    as a block element inline with the title as size permits.*/
 }
 
 header,
 .about,
 .contact,
-.projects img {
+.img-wrapper {
     box-shadow: 1px 1px 5px var(--bgc2mc3);
+    /*This gives our header, project cards, and about and contact sections a slight
+    shadow to make them pop.*/
 }
 
 article #projects {
     text-shadow: 2px 2px var(--mainc1);
     padding-top: 1%;
-}
-
-main article h3 {
-    justify-content: center;
+    background-image: linear-gradient(var(--mainc1), var(--backgroundc1));
+    font-size: 50px;
+    margin: 0;
+    /*This gives our 'Projects' title shadow and gives the beginning of our page a
+    slight gradient that draws the eye and eases the user into the 'Projects' section.*/
 }
 
 #projects-title {
-    margin-left: 40%;
+    margin-left: 42%;
+    /*This positions our 'Projects' title within our page*/
 }
 
 .projects-text-wrapper {
@@ -97,6 +113,8 @@ main article h3 {
     top: 30px;
     left: 30px;
     z-index: 1;
+    /*This gives each of our product cards a clean title that lays above them and stays
+    in the upper left corner of the cards.*/
 }
 
 .projects-text {
@@ -106,6 +124,8 @@ main article h3 {
     background-color: var(--bgc2mc3);
     position: relative;
     z-index: 1;
+    /*This defines the font of the text that our project cards contain. It displays
+    over the project cards.*/
 }
 
 .img-wrapper {
@@ -118,6 +138,10 @@ main article h3 {
     z-index: 1;
     position: inherit;
     background-color: black;
+    /*This provides our project cards with a wrapper. They have thick borders that separate
+    them from the other elements, they take the width of the page (other than the margins),
+    displays above the project images, and gives with our interactive opacity upon hovering,
+    they are darker until interacted with.*/
 }
 
 .horiseon-img,
@@ -125,19 +149,12 @@ main article h3 {
     justify-content: center;
     width: 100%;
     border-radius: 0% 2% 2% 2%;
-}
-
-.horiseon-img,
-.placeholder-img {
     opacity: 60%;
     transition: .2s;
     margin-bottom: -3px;
-}
-
-#projects {
-    background-image: linear-gradient(var(--mainc1), var(--backgroundc1));
-    font-size: 50px;
-    margin: 0;
+    /*The project images occupy the enitre area of their cards. They have rounded borders.
+    They are slightly darker until interacted with (as stated above), with a slight
+    transition to the opacity.*/
 }
 
 #projects,
@@ -145,20 +162,23 @@ main article h3 {
 #contact {
     color: var(--bgc2mc3);
     text-shadow: var(--mainc1);
+    /*This defines the color and shadow of our projects, about, and contact sections.*/
 }
 
 .projects {
-    border: 0px solid var(--bgc2mc3);
     margin-bottom: 3%;
+    /*This gives our projects section slight spacing from our about and contact sections.*/
 }
 
 aside {
     flex: auto;
     display: inline-flex;
+    /*This lets our aside of our about and contact sections to flex within our page.*/
 }
 
 aside section p {
     margin: 15px 0;
+    /*This gives the paragraphs within our aside some spacing from each other.*/
 }
 
 .about {
@@ -166,19 +186,24 @@ aside section p {
     max-width: 75%;
     margin: 1%;
     background-color: var(--accentc1);
+    /*Our about section has a different background color than the global, has a small margin
+    surrounding it, and occupies 75% of the width of the page at larger window sizes.*/
 }
 
 #about {
     margin: 2% auto 1% 2%;
+    /*This gives our about section spacing within its box.*/
 }
 
 #about,
 #contact {
     font-size: 30px;
+    /*This defines the text size within our about and contact sections.*/
 }
 
 #contact {
     margin: 6% 10% 4% 4%;
+    /*This gives our contact section spacing within its box.*/
 }
 
 #abouttext {
@@ -186,11 +211,14 @@ aside section p {
     padding: 2%;
     width: 60%;
     color: var(--bgc2mc3);
+    /*The text within our about section will be on the left of the section, will
+    have a different color, and will occupy 60% of the box's width.*/
 }
 
 #aboutportrait {
     width: 40%;
     padding: 2.5%;
+    /*The portrait picture will occupy 40% of the about box's width*/
 }
 
 .contact {
@@ -198,34 +226,43 @@ aside section p {
     background-color: var(--bgc2mc3);
     color: var(--accentc1);
     margin: 1%;
+    /*The contact section will occupy 25% of the aside's width at larger window sizes.
+    It will also have different colors and a slight margin.*/
 }
 
 #contact {
     color: var(--accentc1);
+    /*The title text within our contact section.*/
 }
 
 #andlinks {
     font-size: 18px;
     margin-left: 2%;
+    /*The 'and links' part of our contact section's title will be slightly spaced from it
+    and be slightly smaller.*/
 }
 
 #githublink,
 #email a {
     color: var(--mainc1);
+    /*The links within our contact section will follow the color palette of our page.*/
 }
 
 #email,
 #github {
     margin: 1%;
     padding: 2%;
+    /*The email and GitHub text will have spacing within its box.*/
 }
 
 footer h3 {
     margin: 2% 0 0 43.5%;
+    /*This centers our footer text*/
 }
 
 footer h4 {
-    margin-left: 49%
+    margin: 0 0 2% 49%
+    /*This centers our copyright and gives it some separation from the bottom of the page.*/
 }
 
 @media screen and (max-width:992px) {
@@ -264,6 +301,8 @@ footer h4 {
     #contact {
         margin: 2%;
     }
+    /*This media query changes the font size and margins from multiple elements at slightly
+    smaller window sizes.*/
 }
 
 @media screen and (max-width:768px) {
@@ -314,6 +353,14 @@ footer h4 {
         display: flex;
         flex-wrap: wrap;
     }
+    /*This media query changes the font size and margins from multiple elements at smaller
+    window sizes. It also shortens our job title to make the nav bar more efficient, places
+    it on the right side of the nav bar, changes the color of our nav bar links to
+    differentiate them better from our page title, and places the nav bar links on the bottom
+    left of the sticky nav.
+    This also makes our about and contact sections display vertically instead of horizontally
+    in order to more efficiently use the page space. It allows the content within our contact
+    section to flex and wrap within their box at much smaller sizes.*/
 }
 
 @media screen and (max-width:1200px) and (min-width:1081px) {
@@ -323,6 +370,8 @@ footer h4 {
     .projects-text-wrapper {
         left: 28px;
     }
+    /*This allows our project titles and GitHub link to fit nicely within their boxes at
+    the defined window sizes.*/
 }
 
 @media screen and (max-width:1080px) and (min-width:951px) {
@@ -335,6 +384,8 @@ footer h4 {
     .projects-text-wrapper {
         left: 24px;
     }
+    /*This allows our project titles, contact title, and GitHub link to fit nicely within
+    their boxes at the defined window sizes.*/
 }
 
 @media screen and (max-width:950px) and (min-width:894px) {
@@ -344,6 +395,8 @@ footer h4 {
     .projects-text-wrapper {
         left: 24px;
     }
+    /*This allows our project titles and GitHub link to fit nicely within their boxes at
+    the defined window sizes.*/
 }
 
 @media screen and (max-width:893px) and (min-width:811px) {
@@ -353,6 +406,8 @@ footer h4 {
     .projects-text-wrapper {
         left: 22px;
     }
+    /*This allows our project titles and GitHub link to fit nicely within their boxes at
+    the defined window sizes.*/
 }
 
 @media screen and (max-width:810px) and (min-width:768px) {
@@ -362,21 +417,22 @@ footer h4 {
     .projects-text-wrapper {
         left: 20px;
     }
+    /*This allows our project titles and GitHub link to fit nicely within their boxes at
+    the defined window sizes.*/
 }
 
 li:hover {
     text-shadow: var(--accentc1) 1px 0 10px;
     transition: .2s;
-}
-
-a:hover {
-    text-shadow: var(--bgc2mc3) 1px 0 10px;
-    transition: all .2s ease-out;
+    /*This makes our nav bar links glow when being hovered over. There is a small fade-in effect
+    that makes it feel more organic.*/
 }
 
 aside a:hover {
     text-shadow: var(--accentc1) 1px 0 10px;
     transition: all .2s ease-out;
+    /*This makes the links within our side bar (currently only in our contact section)
+    glow when hovered over. There is a short transition that makes it feel organic.*/
 }
 
 .projects-text:hover,
@@ -384,5 +440,19 @@ aside a:hover {
 .placeholder-img:hover {
     opacity: 100%;
     transition: all 0.25s ease-out;
+    /*This makes our project images brighten when hovered over. It brightens
+    because there is a black background to the images that disappears via becoming
+    opaque when hovered over. There is a short transition to the effect that makes
+    it appear more organic.*/
+}
 
+.projects-text:hover,
+.horiseon-img:hover,
+.placeholder-img:focus {
+    opacity: 100%;
+    transition: all 0.25s ease-out;
+    /*This makes our project images brighten when hovered over. It brightens
+    because there is a black background to the images that disappears via becoming
+    opaque when hovered over. There is a short transition to the effect that makes
+    it appear more organic.*/
 }
