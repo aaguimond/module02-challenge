@@ -94,30 +94,35 @@ article #projects {
     padding-top: 1%;
     background-image: linear-gradient(var(--mainc1), var(--backgroundc1));
     font-size: 50px;
-    margin: 0;
+    margin-bottom: 3%;
     /*This gives our 'Projects' title shadow and gives the beginning of our page a
     slight gradient that draws the eye and eases the user into the 'Projects' section.*/
 }
 
 #projects-title {
     margin-left: 42%;
-    /*This positions our 'Projects' title within our page*/
+    /*This positions our 'Projects' title within our page.*/
 }
 
 .project-position {
-    position: static;
+    position: relative;
+    margin-bottom: 2%;
+    /*This allows us to edit the position of the project card titles below and gives us
+    separation between our project cards.*/
 }
 
 .projects-text-wrapper {
-    display: inline-block;
-    border: 10px solid var(--bgc2mc3);
+    display: block;
+    background-color: var(--bgc2mc3);
+    height: 32px;
     justify-content: center;
     z-index: 1;
-    position: sticky;
+    position: absolute;
+    margin-top: 0.5%;
     left: 2.5%;
-    top: 25%;
-    /*This gives each of our product cards a clean title that lays above them and stays
-    in the upper left corner of the cards.*/
+    right: auto;
+    /*This gives each of our product cards a clean title that lays above them and defines
+    that they stay in the upper left corner of the cards.*/
 }
 
 .projects-text {
@@ -125,9 +130,10 @@ article #projects {
     text-decoration: none;
     color: var(--mainc1);
     background-color: var(--bgc2mc3);
+    border: 5px solid var(--bgc2mc3);
     z-index: 1;
     /*This defines the font of the text that our project cards contain. It displays
-    over the project cards.*/
+    over the project cards. We give a border to the text as well.*/
 }
 
 .img-wrapper {
@@ -136,9 +142,8 @@ article #projects {
     justify-content: center;
     width: 96%;
     border-radius: 0% 3% 3% 0%;
-    margin: -2% 0% 0% 2%;
+    margin: 0% 0% 0% 2%;
     z-index: 1;
-    position: inherit;
     background-color: black;
     /*This provides our project cards with a wrapper. They have thick borders that separate
     them from the other elements, they take the width of the page (other than the margins),
@@ -291,8 +296,7 @@ footer h4 {
         margin: 1px 10px 3px 20px;
     }
     .projects-text-wrapper {
-        top: 36px;
-        left: 16px;
+        top: 0.75%;
     }
     aside {
         margin: 0% 2% 0% 0%;
@@ -350,8 +354,7 @@ footer h4 {
         margin: 1px 10px 3px 20px;
     }
     .projects-text-wrapper {
-        top: 36px;
-        left: 16px;
+        top: 1%;
     }
     #website-refactor {
         display: none;
