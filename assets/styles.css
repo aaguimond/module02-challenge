@@ -347,8 +347,9 @@ footer h4 {
     .projects-text-wrapper {
         top: 36px;
         left: 16px;
-        flex-wrap: wrap;
-        flex-direction: column;
+    }
+    #website-refactor {
+        display: none;
     }
     aside {
         flex-wrap: wrap;
