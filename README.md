@@ -29,7 +29,7 @@ Building my first website from scratch using HTML, CSS, and Git
 
 [Git Hub Repository](https://github.com/aaguimond/module02-challenge)
 
-[Live Web Page](https://aaguimond.github.io/module02-challenge)
+[Live Web Page](https://aaguimond.github.io/portfolio-module02-challenge/)
 
 ## Purpose
 
