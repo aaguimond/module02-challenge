@@ -31,6 +31,10 @@ Building my first website from scratch using HTML, CSS, and Git
 
 [Live Web Page](https://aaguimond.github.io/portfolio-module02-challenge/)
 
+## Screenshot of Current Site Build
+
+![screenshot of current build](/assets/PortfolioScreenshot01.png?raw=true)
+
 ## Purpose
 
 This project is a part of my education for Northwestern University's Coding Bootcamp. Our objective was to create a live URL to host our continuously growing portfolios.
@@ -67,11 +71,23 @@ As I'm still relatively early into my web development education, I have had to t
 ### CSS Elements
 
 This portfolio site uses some neat CSS that I'm proud of. Some of it is listed below:
-* A sticky navigation bar
-* Image wrappers that transition from partial to full opacity upon being hovered over
+
+* A sticky navigation bar ([the purple bar at the top of the page screenshot](#screenshot-of-current-site-build))
+
+* Image wrappers that transition from partial to full opacity upon being hovered over. A full opacity image wrapper can be viewed below and referenced with a partial opacity wrapper [above](#screenshot-of-current-site-build)
+
+![screenshot of an image wrapper at full opacity](./assets/PortfolioCardOpacity01.png?raw=true)
+
 * Links that glow upon being hovered over
-* Images that dynamically scale to the size of the webpage, eliminating the need to scroll horizontally and enabling the page to efficiently use all space available to it
+
+![screenshot of a link glowing](./assets/PortfolioLinksGlow01.png)
+
+* Images that dynamically scale to the size of the webpage, eliminating the need to scroll horizontally and enabling the page to efficiently use all space available to it. Below is a static image of the page at a small window width
+
+![screenshot of the portfolio with slight changes at a smaller width](./assets/PortfolioSmallWindow.png)
+
 * Drop shadows that give each box on the page depth
+
 * Media queries that enable the page to dynamically shift its layout depending on the size of the viewport viewing the page
 
 ### Javascript
