@@ -1,8 +1,6 @@
-# Northwestern University Coding Bootcamp Module 2 Challenge
+# Creating a Portfolio From Scratch
 
-## Creating a Portfolio From Scratch
-
-Building my first website from scratch using HTML, CSS, and Git
+## Building my first website from scratch using HTML, CSS, and Git
 
 ### Table of Contents
 
